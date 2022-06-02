@@ -37,7 +37,7 @@
 // **********************************************************************************
 // Everything is put to sleep including the MCU, the radio (if any) and the FlashMem chip
 //**** SETTINGS *********************************************************************************************
-#define WITH_SPIFLASH           //comment this line out if you don't have the FLASH-MEM chip on your Moteino
+//#define WITH_SPIFLASH           //comment this line out if you don't have the FLASH-MEM chip on your Moteino
 //*********************************************************************************************
 #include <RFM69.h>      //https://www.github.com/lowpowerlab/rfm69
 #include <RFM69_ATC.h>  //included in RFM69
@@ -64,6 +64,7 @@
 
 #include <Wire.h>
 #include "Adafruit_HTU21DF.h"
+//#define LED_BUILTIN 9   // moteino is D9
 //*********************************************************************************************
 #define DALLAS_PIN        7
 #define DALLAS_RESOLUTION 9
@@ -182,8 +183,8 @@ void loop() {
     DEBUG("Acked RSSI: "); Serial.print( radio.getAckRSSI(), DEC);
     DEBUG("\nXmitLevel: "); DEBUGDEC( radio.getXmitLevel());
     DEBUG("\n");
-    uint8_t xpwr = radio.getXmitLevel();
-    sprintf(buff, "XP:%d", xpwr );
+    //uint8_t xpwr = radio.getXmitLevel();
+    //sprintf(buff, "XP:%d", xpwr );
     radio.sendWithRetry(GATEWAYID, buff, strlen(buff));
   }
   else {

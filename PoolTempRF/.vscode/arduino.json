@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "output": "build",
+    "sketch": "PoolTempRF.ino",
+    "port": "/dev/ttyUSB0"
+}

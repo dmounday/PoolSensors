@@ -1,3 +1,12 @@
+#include <SPIFlash.h>
+
+#include <SPIFlash.h>
+
+#include <RFM69_ATC.h>
+#include <RFM69_OTA.h>
+#include <RFM69.h>
+#include <RFM69registers.h>
+
 // **********************************************************************************************************
 // MightyHat gateway base unit sketch that works with MightyHat equipped with RFM69W/RFM69HW/RFM69CW/RFM69HCW
 // This will relay all RF data over serial to the host computer (RaspberryPi) and vice versa.
@@ -14,8 +23,8 @@
 #include <RFM69_OTA.h>   //get it here: https://github.com/lowpowerlab/RFM69
 #include <SPIFlash.h>    //get it here: https://github.com/lowpowerlab/spiflash
 #include <PString.h>     //easy string manipulator: http://arduiniana.org/libraries/pstring/
-#include <Streaming.h>   //easy C++ style output operators: http://arduiniana.org/libraries/streaming/
-#include "U8glib.h"      //https://bintray.com/olikraus/u8glib/Arduino
+#include "Streaming.h"   //easy C++ style output operators: http://arduiniana.org/libraries/streaming/
+//#include "U8glib.h"      //https://bintray.com/olikraus/u8glib/Arduino
                          //u8g compared to adafruit lib: https://www.youtube.com/watch?v=lkWZuAnHa2Y
                          //drawing bitmaps: https://www.coconauts.net/blog/2015/01/19/easy-draw-bitmaps-arduino/
 //*****************************************************************************************************************************
