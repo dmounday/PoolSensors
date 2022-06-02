@@ -1,2 +1,4 @@
-/Release/
-/sloeber.ino.cpp
+.vscode/*
+!.vscode/settings.json
+!.vscode/arduino.json
+build/*
