@@ -1,12 +1,3 @@
-#include <SPIFlash.h>
-
-#include <SPIFlash.h>
-
-#include <RFM69_ATC.h>
-#include <RFM69_OTA.h>
-#include <RFM69.h>
-#include <RFM69registers.h>
-
 // **********************************************************************************************************
 // MightyHat gateway base unit sketch that works with MightyHat equipped with RFM69W/RFM69HW/RFM69CW/RFM69HCW
 // This will relay all RF data over serial to the host computer (RaspberryPi) and vice versa.
@@ -51,6 +42,7 @@
 #define POWER_LED_OFF()    { digitalWrite(BTN_LED_RED, LOW);  digitalWrite(BTN_LED_GRN, LOW); }
 #define ON              1
 #define OFF             0
+#define SS_FLASHMEM     8         // This should be defined by pins_arduino.h headers for Moteino boards.
 
 #define BUZZER              5     // Buzzer attached to D5 (PWM pin required for tones)
 #define BUTTON             A2     // Power button pin
